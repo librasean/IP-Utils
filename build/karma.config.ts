@@ -22,8 +22,7 @@ const configuration = {
     require('karma-coverage'),
     require('karma-jasmine'),
     require('karma-phantomjs-launcher'),
-    require('karma-notify-reporter'),
-    require('karma-chrome-launcher')
+    require('karma-notify-reporter')
   ],
 
   exclude: [],
@@ -73,20 +72,9 @@ const configuration = {
   autoWatch: true,
 
   browsers: ['PhantomJS'],
-/*
-  customLaunchers: {
-    Chrome_travis_ci: {
-      base: 'Chrome',
-      flags: ['--no-sandbox']
-    }
-  },*/
 
   concurrency: Infinity
 }
-
-// if (process.env.TRAVIS) {
-//   configuration.browsers = ['Chrome_travis_ci']
-// }
 
 export default (config: any) => {
   config.set(configuration)
