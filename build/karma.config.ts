@@ -47,7 +47,7 @@ const configuration = {
 
   coverageIstanbulReporter: {
     dir: path.resolve(__dirname, '../coverage'),
-    reports: ['html', 'lcov'],
+    reports: ['html', 'lcov', 'cobertura'],
     fixWebpackSourcePaths: false,
     skipFilesWithNoCoverage: true,
     'report-config': {
@@ -56,6 +56,9 @@ const configuration = {
       },
       lcov: {
         subdir: 'lcov'
+      },
+      cobertura: {
+        subdir: 'cobertura'
       }
     }
   },
