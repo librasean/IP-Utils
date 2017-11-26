@@ -12,3 +12,9 @@ export function isValidIpv4 (ipaddress: any) {
 export function isValidIpv6 (ipaddress: any) {
   return IPV6.test(ipaddress)
 }
+
+export function stringToInt (ipaddress: String) {
+  return ipaddress.split('.').reduce(function (ipInt, octet) {
+    return (ipInt << 8) + parseInt(octet, 10)
+  } , 0) >>> 0
+}
