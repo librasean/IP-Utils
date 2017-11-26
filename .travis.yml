@@ -2,10 +2,7 @@ language: node_js
 node_js:
   - "node"
   - "stable"
-script: echo "Installing Dependencies..."
 install:
   - npm install
-script: echo "Running unit tests..."
-test:
+script:
   - npm test
-script: echo "Completing Production Build..."
