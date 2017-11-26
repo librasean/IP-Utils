@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "outDir": "../lib/module/commonjs",
+    "rootDir": "../src",
+    "module": "commonjs",
+    "inlineSourceMap": false
+  },
+  "include": [
+    "../src/**/*.ts"
+  ]
+}
