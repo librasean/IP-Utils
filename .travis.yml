@@ -1,8 +1,7 @@
 language: node_js
-node:
+node_js:
   - "node"
-  - "8"
-  - "7"
+  - "stable"
 script: echo "Installing Dependencies..."
 install:
   npm install
