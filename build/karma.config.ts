@@ -21,6 +21,7 @@ const configuration = {
     require('karma-coverage-istanbul-reporter'),
     require('karma-coverage'),
     require('karma-jasmine'),
+    require('karma-phantomjs-launcher'),
     require('karma-notify-reporter'),
     require('karma-chrome-launcher')
   ],
@@ -72,13 +73,13 @@ const configuration = {
   autoWatch: true,
 
   browsers: ['Chrome'],
-
+/*
   customLaunchers: {
     Chrome_travis_ci: {
       base: 'Chrome',
       flags: ['--no-sandbox']
     }
-  },
+  },*/
 
   concurrency: Infinity
 }

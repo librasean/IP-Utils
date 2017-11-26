@@ -92,6 +92,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-mocha-reporter": "^2.2.5",
     "karma-notify-reporter": "^1.0.1",
+    "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack": "^2.0.5",
     "lodash.camelcase": "^4.3.0",
     "mocha": "^4.0.1",
