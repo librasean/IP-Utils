@@ -1,0 +1,14 @@
+language: node_js
+
+node:
+  - lts/*
+
+script: echo "Installing Dependencies..."
+install:
+  - npm install
+
+script: echo "Running unit tests..."
+test:
+  - npm test
+
+script: Echo "Completing Production Build..."
