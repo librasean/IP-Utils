@@ -72,7 +72,7 @@ const configuration = {
 
   autoWatch: true,
 
-  browsers: ['Chrome'],
+  browsers: ['PhantomJS'],
 /*
   customLaunchers: {
     Chrome_travis_ci: {
@@ -84,9 +84,9 @@ const configuration = {
   concurrency: Infinity
 }
 
-if (process.env.TRAVIS) {
-  configuration.browsers = ['Chrome_travis_ci']
-}
+// if (process.env.TRAVIS) {
+//   configuration.browsers = ['Chrome_travis_ci']
+// }
 
 export default (config: any) => {
   config.set(configuration)
