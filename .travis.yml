@@ -1,16 +1,12 @@
 language: node_js
-
 node:
-  - node
-  - 8
-  - 7
-
+  node
+  8
+  7
 script: echo "Installing Dependencies..."
 install:
-  - npm install
-
+  npm install
 script: echo "Running unit tests..."
 test:
-  - npm test
-
+  npm test
 script: Echo "Completing Production Build..."
