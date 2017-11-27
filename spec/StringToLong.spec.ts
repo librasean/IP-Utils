@@ -1,5 +1,5 @@
 import 'jasmine'
-import { VALID_IPS, INVALID_IPS } from './IpAddressesV4.constants'
+import { VALID_IPS, INVALID_IPS } from './TestingConstants'
 import { stringToInt } from '../src/index'
 
 describe('StringToInt', () => {
