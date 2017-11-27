@@ -1,9 +1,9 @@
-import { intToSring } from './IntToString'
+import { intToString } from './IntToString'
 
 export function isPrivate (ip: string | number): Boolean {
   let ipaddress: string = ''
   if (typeof ip === 'number') {
-    ipaddress = intToSring(ip)
+    ipaddress = intToString(ip)
   } else {
     ipaddress = ip
   }

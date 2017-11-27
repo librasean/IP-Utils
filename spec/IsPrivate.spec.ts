@@ -1,5 +1,5 @@
 import 'jasmine'
-import { PRIVATE_IPS, PUBLIC_IPS } from './IpAddressesV4.constants'
+import { PRIVATE_IPS, PUBLIC_IPS } from './TestingConstants'
 import { isPrivate } from '../src/index'
 
 describe('isPrivate', () => {

@@ -13,17 +13,9 @@ describe('getOctetArray function', () => {
 
   it('Should set correct order to octets from string IP', () => {
     let resultArray = getOctetArray('1.2.3.4')
-    expect(resultArray[0]).toEqual(1)
-    expect(resultArray[1]).toEqual(2)
-    expect(resultArray[2]).toEqual(3)
-    expect(resultArray[3]).toEqual(4)
-  })
-
-  it('Should set correct order to octets from Long IP', () => {
-    let resultArray = getOctetArray(16909060)
-    expect(resultArray[0]).toEqual(1)
-    expect(resultArray[1]).toEqual(2)
-    expect(resultArray[2]).toEqual(3)
-    expect(resultArray[3]).toEqual(4)
+    expect(resultArray[0]).toEqual('1')
+    expect(resultArray[1]).toEqual('2')
+    expect(resultArray[2]).toEqual('3')
+    expect(resultArray[3]).toEqual('4')
   })
 })
