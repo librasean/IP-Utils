@@ -14,6 +14,7 @@ $ npm install --save ip-utils
 $ yarn install --save ip-utils
 ```
 ```js
+Browser
 // Import the Library
 import * as ip from 'ip-util';
 // Use any of the contained methods
@@ -22,6 +23,12 @@ ip.validIp('1.1.1.1');  // True
 // Alternatively - import functions selectively
 import { validIp } from 'ip-util'
 validIp('1.1.1.1'); // True
+
+NodeJS
+// Import the Library
+const ip = require('ip-util');
+// Use any of the contained methods
+ip.validIp('1.1.1.1'); // True
 ```
 
 ## Contributing
@@ -29,6 +36,12 @@ Any and contributions are very welcome - be it:
 - features that you implement yourself and then PR back.
 - Ideas/Requests for new features.
 - Suggestions for improvements.
+
+#### Commit Format
+The project uses [commitizen](https://commitizen.github.io/cz-cli/) to standardise commits in format:
+`<type>(<scope>): <subject>`
+
+
 
 #### Workflow is as follows:
 1. Mark issue your working with label - *Status:In Progress* 
