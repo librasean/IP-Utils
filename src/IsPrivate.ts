@@ -1,12 +1,4 @@
-import { intToString } from './IntToString'
-
-export function isPrivate (ip: string | number): Boolean {
-  let ipaddress: string = ''
-  if (typeof ip === 'number') {
-    ipaddress = intToString(ip)
-  } else {
-    ipaddress = ip
-  }
+export function isPrivate (ipaddress: string): Boolean {
   return /^(::f{4}:)?10\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$/i
       .test(ipaddress) ||
     /^(::f{4}:)?192\.168\.([0-9]{1,3})\.([0-9]{1,3})$/i.test(ipaddress) ||
