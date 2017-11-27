@@ -28,13 +28,28 @@ export const INVALID_IPS_NUMBER: number[] = [
   0
 ]
 
-export const PRIVATE_IPS: (string | number)[] = [
+export const PRIVATE_IPS: string[] = [
   '192.168.1.1',
-  3232235777
+  '10.1.2.3'
 ]
 
-export const PUBLIC_IPS: (string | number)[] = [
+export const PUBLIC_IPS: string[] = [
   '25.1.1.1',
   '8.8.8.8',
   '4.2.2.2'
+]
+
+export const RESERVED_IPS: string[] = [
+  '0.0.0.1',
+  '100.64.1.1',
+  '241.1.2.3',
+  '198.51.100.5',
+  '169.254.10.20'
+]
+
+export const NON_RESERVED_IPS: string[] = [
+  '1.2.3.4',
+  '6.23.43.54',
+  '8.8.8.8',
+  '50.1.2.3'
 ]
