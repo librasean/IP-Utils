@@ -1,5 +1,5 @@
 import 'jasmine'
-import { getNetworkAddress } from '../src/SubnetInfo'
+import { networkAddress } from '../src/NetworkAddress'
 
 const TEST_VALUES = [
   ['1.1.1.1/24','1.1.1.0'],
@@ -8,6 +8,6 @@ const TEST_VALUES = [
 
 describe('Network Address', () => {
   it('Should return correct network addresses', () => {
-    TEST_VALUES.forEach(arr => expect(getNetworkAddress(arr[0])).toEqual(arr[1]))
+    TEST_VALUES.forEach(arr => expect(networkAddress(arr[0])).toEqual(arr[1]))
   })
 })

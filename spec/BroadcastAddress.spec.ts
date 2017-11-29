@@ -1,5 +1,5 @@
 import 'jasmine'
-import { getBroadcastAddress } from '../src/SubnetInfo'
+import { broadcastAddress } from '../src/BroadcastAddress'
 
 const TESTS = [
   ['192.168.1.1/24', '192.168.1.255']
@@ -7,6 +7,6 @@ const TESTS = [
 
 describe('BroadcastAddress', () => {
   it('Should return correct values', () => {
-    TESTS.forEach(arr => expect(getBroadcastAddress(arr[0])).toEqual(arr[1]))
+    TESTS.forEach(arr => expect(broadcastAddress(arr[0])).toEqual(arr[1]))
   })
 })

@@ -1,5 +1,5 @@
 import 'jasmine'
-import { firstHostAddress } from '../src/SubnetInfo'
+import { firstHost } from '../src/FirstHost'
 
 const TESTS = [
   ['1.1.1.1/24','1.1.1.1'],
@@ -8,6 +8,6 @@ const TESTS = [
 
 describe('FirstHostAddress Function', () => {
   it('Should return correct first address for test subnets', () => {
-    TESTS.forEach((arr) => expect(firstHostAddress(arr[0])).toEqual(arr[1]))
+    TESTS.forEach((arr) => expect(firstHost(arr[0])).toEqual(arr[1]))
   })
 })

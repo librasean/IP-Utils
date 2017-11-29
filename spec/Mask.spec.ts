@@ -1,5 +1,5 @@
 import 'jasmine'
-import { mask } from '../src/SubnetInfo'
+import { mask } from '../src/Mask'
 
 const TESTS = [
   ['1.1.1.1/24', '255.255.255.0'],
