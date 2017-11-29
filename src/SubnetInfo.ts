@@ -43,14 +43,17 @@ export function getNetworkAddress (subnet: string): string {
   for (let i = 0; i < 4; i++) {
     let currMaskOctet = parseInt(maskOctets[i], 10)
     let currIpOctet = parseInt(ipOctets[i], 10)
-    networkAddress.concat(String(currMaskOctet & currIpOctet))
+    networkAddress = networkAddress.concat(String(currMaskOctet & currIpOctet))
+    if (i !== 3) {
+    	networkAddress = networkAddress.concat('.')
+    }
   }
   return networkAddress
 }
 
 export function getBroadcastAddress (subnet: string): string {
   let hostLong = stringToInt(getNetworkAddress(subnet))
-  let broadcastLong = hostLong + getNumberHosts(subnet, true)
+  let broadcastLong = hostLong + (getNumberHosts(subnet, true) - 1)/* -1  as one Address already accounted for*/
   return intToString(broadcastLong)
 }
 
@@ -76,6 +79,6 @@ export function cidrMask (subnet: string): number {
 
 export function mask (subnet: string): string {
   let split = subnet.split('/')
-  let longMask = Math.pow(2, 32) - Math.pow(2, parseInt(split[1], 10))
+  let longMask = Math.pow(2, 32) - Math.pow(2, 32 - parseInt(split[1], 10))
   return intToString(longMask)
 }

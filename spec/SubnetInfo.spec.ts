@@ -32,19 +32,19 @@ describe('cidrInfo Function', () => {
     SUBNETS.forEach(subnet => expect(cidrInfo(subnet).lastHostAddress).toBeDefined())
   })
 
-  // it('Should return correct results for 192.168.1.0/24', () => {
-  //   let expectedResult = {
-  //     networkAddress: '192.168.1.0',
-  //     broadcastAddress: '192.168.1.255',
-  //     numberHosts: 254,
-  //     inclusiveNumberHosts: 256,
-  //     firstHostAddress: '192.168.1.1',
-  //     lastHostAddress: '192.168.1.254',
-  //     mask: '255.255.255.0',
-  //     cidrMask: 24,
-  //     contains: Function
-  //   }
-  //   expect(cidrInfo('192.168.1.0/24')).toEqual(expectedResult)
-  // })
+  it('Should return correct results for 192.168.1.0/24', () => {
+    let expectedResult = {
+      networkAddress: '192.168.1.0',
+      broadcastAddress: '192.168.1.255',
+      numberHosts: 254,
+      inclusiveNumberHosts: 256,
+      firstHostAddress: '192.168.1.1',
+      lastHostAddress: '192.168.1.254',
+      mask: '255.255.255.0',
+      cidrMask: 24,
+      contains: Function
+    }
+    expect(cidrInfo('192.168.1.0/24')).toEqual(expectedResult)
+  })
 
 })
