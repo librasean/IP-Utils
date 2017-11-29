@@ -1,8 +1,8 @@
-import { intToString } from './IntToString'
+import { toString } from './ToString'
 import { networkAddress } from './NetworkAddress'
-import { stringToInt } from './StringToInt'
+import { toLong } from './ToLong'
 
 export function firstHost (subnet: string): string {
-  let longFirstHost = stringToInt(networkAddress(subnet)) + 1
-  return intToString(longFirstHost)
+  let longFirstHost = toLong(networkAddress(subnet)) + 1
+  return toString(longFirstHost)
 }

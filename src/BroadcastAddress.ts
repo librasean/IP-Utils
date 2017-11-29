@@ -1,10 +1,10 @@
-import { intToString } from './IntToString'
+import { toString } from './ToString'
 import { networkAddress } from './NetworkAddress'
-import { stringToInt } from './StringToInt'
-import { numberHosts } from './NumberHosts'
+import { toLong } from './ToLong'
+import { numberHosts } from './numberHosts'
 
 export function broadcastAddress (subnet: string): string {
-  let hostLong = stringToInt(networkAddress(subnet))
+  let hostLong = toLong(networkAddress(subnet))
   let broadcastLong = hostLong + (numberHosts(subnet, true) - 1)/* -1  as one Address already accounted for*/
-  return intToString(broadcastLong)
+  return toString(broadcastLong)
 }

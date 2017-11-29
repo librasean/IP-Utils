@@ -1,4 +1,4 @@
-import { stringToInt } from './StringToInt'
+import { toLong } from './ToLong'
 
 export function isReserved (ipaddress: string) {
   return ipInReservedRange(ipaddress)
@@ -34,8 +34,8 @@ function ipInReservedRange (ipaddress: string) {
 }
 
 function ipInRange (ipaddress: string, range: string[]) {
-  let ip = stringToInt(ipaddress)
-  let startRange = stringToInt(range[0])
-  let endRange = stringToInt(range[1])
+  let ip = toLong(ipaddress)
+  let startRange = toLong(range[0])
+  let endRange = toLong(range[1])
   return ip >= startRange && ip <= endRange
 }

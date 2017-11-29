@@ -1,6 +1,5 @@
-export declare function isValidIp(ipaddress: any): Boolean;
-export declare function isValidIpv4(ipaddress: any): Boolean;
-export declare function isValidIpv6(ipaddress: any): Boolean;
-export declare function stringToInt(ipaddress: String): Number;
-export declare function intToSring(ipInt: number): String;
-export declare function isPrivate(ipaddress: string): Boolean;
+export { isValidIp, isValidIpv4, isValidIpv6 } from './IsValidIp';
+export { toLong } from './ToLong';
+export { toString } from './ToString';
+export { isPrivate } from './IsPrivate';
+export { getOctetArray, getOctet } from './GetOctetArray';
