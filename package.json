@@ -1,6 +1,7 @@
 {
   "name": "ip-utils",
   "version": "2.0.1",
+  "description": "Library of useful functions related to IP",
   "license": "MIT",
   "author": {
     "email": "sanelson87@gmail.com",
