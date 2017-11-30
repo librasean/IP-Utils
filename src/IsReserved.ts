@@ -4,7 +4,7 @@ export function isReserved (ipaddress: string) {
   return ipInReservedRange(ipaddress)
 }
 // Taken from wikipedia https://en.wikipedia.org/wiki/Reserved_IP_addresses
-export const RESERVED_RANGES = [
+const RESERVED_RANGES = [
   ['0.0.0.0', '0.255.255.255'],
   ['10.0.0.0', '10.255.255.255'],
   ['100.64.0.0','100.127.255.255'],
