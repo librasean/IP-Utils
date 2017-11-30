@@ -1,8 +1,8 @@
-import { toString } from './ToString'
+import { fromLong } from './FromLong'
 import { broadcastAddress } from './BroadcastAddress'
 import { toLong } from './ToLong'
 
 export function lastHost (subnet: string): string {
   let broadcastLong = broadcastAddress(subnet)
-  return toString(toLong(broadcastLong) - 1)
+  return fromLong(toLong(broadcastLong) - 1)
 }
