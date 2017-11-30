@@ -1,6 +1,6 @@
 {
   "name": "ip-utils",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Library of useful functions related to IP",
   "keywords": [
     "ip",
@@ -8,9 +8,9 @@
     "subnet"
   ],
   "url": "https://librasean.github.io/IP-Utils/",
-  "repository" : {
-    "type" : "git"
-  , "url" : "https://github.com/librasean/IP-Utils.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/librasean/IP-Utils.git"
   },
   "license": "MIT",
   "author": {
