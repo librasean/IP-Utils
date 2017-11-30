@@ -1,6 +1,6 @@
 export * from './IsValidIp';
 export * from './ToLong';
-export * from './ToString';
+export * from './FromLong';
 export * from './IsPrivate';
 export * from './GetOctetArray';
 export * from './BroadcastAddress';

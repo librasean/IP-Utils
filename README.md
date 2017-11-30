@@ -36,7 +36,8 @@ isValidIp('54.34.2.12') // True
 isValidIpv4('12.21.2.1') // True
 isValidIpv6('fe80:0:0:0:204:61ff:fe9d:f156') // True
 toLong('192.168.1.1') //3232235777
-toString(3232235777) // 192.168.1.1
+fromLong(3232235777) // 192.168.1.1
+toString(3232235777) // As Above (deprecated)
 isPrivate('2.3.4.5') // False
 isReserved('192.168.2.1') // True
 getOctetArray('50.11.12.13') // ['50', '11', '12', '13']

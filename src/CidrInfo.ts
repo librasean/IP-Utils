@@ -1,5 +1,5 @@
 import { Subnet } from './model/Subnet.model'
-import { numberHosts } from './numberHosts'
+import { numberHosts } from './NumberHosts'
 import { firstHost } from './FirstHost'
 import { networkAddress } from './NetworkAddress'
 import { broadcastAddress } from './BroadcastAddress'
