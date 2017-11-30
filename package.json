@@ -1,7 +1,17 @@
 {
   "name": "ip-utils",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Library of useful functions related to IP",
+  "keywords": [
+    "ip",
+    "network",
+    "subnet"
+  ],
+  "url": "https://librasean.github.io/IP-Utils/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/librasean/IP-Utils.git"
+  },
   "license": "MIT",
   "author": {
     "email": "sanelson87@gmail.com",
@@ -64,10 +74,6 @@
       "helpMessage": "Use \"yarn commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
     }
   },
-  "dependencies": {
-    "fs": "0.0.1-security",
-    "tslib": "^1.8.0"
-  },
   "devDependencies": {
     "@types/jasmine": "^2.8.2",
     "@types/lodash.camelcase": "^4.3.3",
@@ -81,6 +87,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "declaration-bundler-webpack-plugin": "^1.0.3",
     "friendly-errors-webpack-plugin": "^1.6.1",
+    "fs": "0.0.1-security",
     "husky": "^0.14.3",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine": "^2.8.0",
@@ -103,6 +110,7 @@
     "shelljs": "^0.7.8",
     "ts-loader": "^3.1.1",
     "ts-node": "^3.3.0",
+    "tslib": "^1.8.0",
     "tslint": "^5.8.0",
     "tslint-config-standard": "^7.0.0",
     "typedoc": "^0.9.0",
