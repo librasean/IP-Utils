@@ -12,7 +12,7 @@ export * from './LastHost';
 export * from './Mask';
 export * from './MaskToCidr';
 export * from './NetworkAddress';
-export * from './numberHosts';
+export * from './NumberHosts';
 export * from './SubnetInfo';
 export * from './ToLong';
 export * from './ToString';
