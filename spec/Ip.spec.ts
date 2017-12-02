@@ -12,6 +12,9 @@ describe('IP Enclosing function', function () {
     it('should return something', function () {
       expect(testIp.isPrivate()).toBeDefined()
     })
+    it('should return false for test value', function () {
+      expect(testIp.isPrivate()).toBeFalsy()
+    })
   })
   describe('IsReserved', function () {
     it('should have a IsReserved function', function () {
@@ -19,6 +22,9 @@ describe('IP Enclosing function', function () {
     })
     it('should return something', function () {
       expect(testIp.isReserved()).toBeDefined()
+    })
+    it('should return false for test value', function () {
+      expect(testIp.isReserved()).toBeFalsy()
     })
   })
   describe('IsValid', function () {
@@ -28,6 +34,9 @@ describe('IP Enclosing function', function () {
     it('should return something', function () {
       expect(testIp.isValid()).toBeDefined()
     })
+    it('should return true for test value', function () {
+      expect(testIp.isValid()).toBeTruthy()
+    })
   })
   describe('GetOctetArray', function () {
     it('should have a getOctetArray function', function () {
@@ -36,6 +45,9 @@ describe('IP Enclosing function', function () {
     it('should return something', function () {
       expect(testIp.getOctetArray()).toBeDefined()
     })
+    it('should return correct array for test value', function () {
+      expect(testIp.getOctetArray()).toEqual(['1', '1', '1', '1'])
+    })
   })
   describe('GetOctet', function () {
     it('should have a getOctet function', function () {
@@ -43,6 +55,9 @@ describe('IP Enclosing function', function () {
     })
     it('should return something', function () {
       expect(testIp.getOctet(1)).toBeDefined()
+    })
+    it('should return 1 for test value', function () {
+      expect(testIp.getOctet(1)).toEqual('1')
     })
   })
 })

@@ -33,6 +33,39 @@ ip.validIp('1.1.1.1'); // True
 
 ## Usage
 ```js
+// IP Object
+ip('1.1.1.1')
+// Can be chained with
+ip('1.1.1.1').isValid() // True
+ip('1.1.1.1').isReserved() // False
+ip('1.1.1.1').isPrivate() // False
+ip('1.1.1.1').getOctet(1) // '1'
+ip('1.1.1.1').getOctetArray() // ['1', '1', '1', '1']
+
+// Subnet Object
+subnet('192.168.1.1/24')
+// Can be chained with
+subnet('192.168.1.1/24').networkAddress() // '192.168.1.0
+subnet('192.168.1.1/24').broadcastAddress() // '192.168.1.255
+subnet('192.168.1.1/24').firstHost() // '192.168.1.1
+subnet('192.168.1.1/24').lastHost() // '192.168.1.254
+subnet('192.168.1.1/24').mask() // '255.255.255.0
+subnet('192.168.1.1/24').info()
+/* 
+{
+  networkAddress: '192.168.1.0',
+  broadcastAddress: '192.168.1.255',
+  numberHosts: 254,
+  inclusiveNumberHosts: 256,
+  firstHostAddress: '192.168.1.1',
+  lastHostAddress: '192.168.1.254',
+  mask: '255.255.255.0',
+  cidrMask: 24
+ }
+ */
+
+
+// All individual Functions
 isValidIp('54.34.2.12') // True
 isValidIpv4('12.21.2.1') // True
 isValidIpv6('fe80:0:0:0:204:61ff:fe9d:f156') // True
