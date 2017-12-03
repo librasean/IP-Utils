@@ -2,6 +2,7 @@ import { isValidIp as valid } from './IsValidIp'
 import { isReserved as reserved } from './IsReserved'
 import { isPrivate as privateCheck } from './IsPrivate'
 import { getOctetArray as octetArray, getOctet as specificOctet } from './GetOctetArray'
+import { contains } from './Contains'
 
 export class Ip {
   ip: string
@@ -22,6 +23,9 @@ export class Ip {
   }
   getOctet (octet: number) {
     return specificOctet(this.ip, octet)
+  }
+  containedBy (network: string): boolean {
+    return contains(network, this.ip)
   }
 }
 

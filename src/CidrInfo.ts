@@ -16,7 +16,6 @@ export function cidrInfo (subnet: string): Subnet {
     firstHostAddress: firstHost(subnet),
     lastHostAddress: lastHost(subnet),
     mask: mask(subnet),
-    cidrMask: cidrToMask(subnet),
-    contains: Function
+    cidrMask: cidrToMask(subnet)
   }
 }

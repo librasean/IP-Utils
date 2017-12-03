@@ -41,6 +41,7 @@ ip('1.1.1.1').isReserved() // False
 ip('1.1.1.1').isPrivate() // False
 ip('1.1.1.1').getOctet(1) // '1'
 ip('1.1.1.1').getOctetArray() // ['1', '1', '1', '1']
+ip('1.1.1.1').containedBy('1.2.3.4/8') // True
 
 // Subnet Object
 subnet('192.168.1.1/24')
@@ -50,6 +51,7 @@ subnet('192.168.1.1/24').broadcastAddress() // '192.168.1.255
 subnet('192.168.1.1/24').firstHost() // '192.168.1.1
 subnet('192.168.1.1/24').lastHost() // '192.168.1.254
 subnet('192.168.1.1/24').mask() // '255.255.255.0
+subnet('192.168.1.1/24').contains('192.168.1.143') // True
 subnet('192.168.1.1/24').info()
 /* 
 {
@@ -98,6 +100,7 @@ numberHosts('12.13.14.150/25') // 126
 mask('12.13.14.150/25') // '255.255.255.128'
 maskToCidr('255.255.255.0') // '24'
 cidrToMask('43.23.2.65/27') // 27
+contains('192.168.1.0/25', '192.168.1.50') // True
 ```
 
 ## Contributing

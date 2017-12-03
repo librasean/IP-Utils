@@ -50,8 +50,7 @@ describe('Subnet.cidrInfo Function', () => {
       firstHostAddress: '192.168.1.1',
       lastHostAddress: '192.168.1.254',
       mask: '255.255.255.0',
-      cidrMask: 24,
-      contains: Function
+      cidrMask: 24
     }
     expect(Subnet.cidrInfo('192.168.1.0/24')).toEqual(expectedResult)
   })

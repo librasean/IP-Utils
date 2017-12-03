@@ -60,4 +60,15 @@ describe('IP Enclosing function', function () {
       expect(testIp.getOctet(1)).toEqual('1')
     })
   })
+  describe('Contains', function () {
+    it('should have a contains function', function () {
+      expect(testIp.containedBy).toBeDefined()
+    })
+    it('should return something', function () {
+      expect(testIp.containedBy('1.1.1.1/8')).toBeDefined()
+    })
+    it('should return a boolean', function () {
+      expect(testIp.containedBy('1.1.1.1/8')).toEqual(jasmine.any(Boolean))
+    })
+  })
 })
