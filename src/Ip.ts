@@ -3,7 +3,7 @@ import { isReserved as reserved } from './IsReserved'
 import { isPrivate as privateCheck } from './IsPrivate'
 import { getOctetArray as octetArray, getOctet as specificOctet } from './GetOctetArray'
 
-class Ip {
+export class Ip {
   ip: string
   constructor (ipaddress: string) {
     this.ip = ipaddress

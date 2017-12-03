@@ -1,11 +1,12 @@
 import { broadcastAddress as broadcast } from './BroadcastAddress'
-import { networkAddress as network } from './NetworkAddress'
+import { networkAddress as networkAdd } from './NetworkAddress'
 import { firstHost as first } from './FirstHost'
 import { lastHost as last } from './LastHost'
 import { mask as maskComponent } from './Mask'
 import { cidrInfo } from './CidrInfo'
+import { Subnet } from './model/Subnet.model'
 
-class Subnet {
+export class Network {
   sub: string
   constructor (subnet: string) {
     this.sub = subnet
@@ -14,7 +15,7 @@ class Subnet {
     return broadcast(this.sub)
   }
   networkAddress () {
-    return network(this.sub)
+    return networkAdd(this.sub)
   }
   firstHost () {
     return first(this.sub)
@@ -22,7 +23,7 @@ class Subnet {
   lastHost () {
     return last(this.sub)
   }
-  info () {
+  info (): Subnet {
     return cidrInfo(this.sub)
   }
   mask () {
@@ -30,6 +31,6 @@ class Subnet {
   }
 }
 
-export function subnet (subnet: string) {
-  return new Subnet(subnet)
+export function subnet (network: string) {
+  return new Network(network)
 }
