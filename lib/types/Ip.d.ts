@@ -6,5 +6,6 @@ export declare class Ip {
     isPrivate(): Boolean;
     getOctetArray(): string[];
     getOctet(octet: number): string;
+    containedBy(network: string): boolean;
 }
 export declare function ip(ipaddress: string): Ip;

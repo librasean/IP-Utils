@@ -7,5 +7,4 @@ export interface Subnet {
     lastHostAddress: string;
     mask: string;
     cidrMask: number;
-    contains: Function;
 }

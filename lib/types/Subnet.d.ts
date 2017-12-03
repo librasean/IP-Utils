@@ -8,5 +8,6 @@ export declare class Network {
     lastHost(): string;
     info(): Subnet;
     mask(): string;
+    contains(ip: string): boolean;
 }
 export declare function subnet(network: string): Network;

@@ -1,5 +1,5 @@
 import { toLong } from './ToLong'
-import { networkAddress} from './NetworkAddress'
+import { networkAddress } from './NetworkAddress'
 import { broadcastAddress } from './BroadcastAddress'
 
 export function contains (network: string, ipaddress: string): boolean {
