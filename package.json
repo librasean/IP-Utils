@@ -1,6 +1,6 @@
 {
   "name": "ip-utils",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Library of useful functions related to IP",
   "keywords": [
     "ip",
