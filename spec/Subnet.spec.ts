@@ -60,4 +60,10 @@ describe('Subnet Functions Object', function () {
       expect(testSubnet.mask()).toBeDefined()
     })
   })
+  describe('Contains', function () {
+    it('should contain a contains function', function () {
+      expect(testSubnet.contains).toBeDefined()
+      expect(testSubnet.contains('1.1.1.1')).toEqual(jasmine.any(Boolean))
+    })
+  })
 })

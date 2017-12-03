@@ -5,6 +5,7 @@ import { lastHost as last } from './LastHost'
 import { mask as maskComponent } from './Mask'
 import { cidrInfo } from './CidrInfo'
 import { Subnet } from './model/Subnet.model'
+import { contains as contained } from './Contains'
 
 export class Network {
   sub: string
@@ -28,6 +29,9 @@ export class Network {
   }
   mask () {
     return maskComponent(this.sub)
+  }
+  contains (ip: string) {
+    return contained(this.sub, ip)
   }
 }
 

@@ -6,6 +6,5 @@ export interface Subnet {
   firstHostAddress: string,
   lastHostAddress: string,
   mask: string,
-  cidrMask: number,
-  contains: Function
+  cidrMask: number
 }
