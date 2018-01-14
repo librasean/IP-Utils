@@ -51,16 +51,20 @@ describe('IP Utils Test Batch', () => {
       expect(ipUtils.isValidIpv6('2.2.2..')).toBeFalsy()
       expect(ipUtils.isValidIpv6(123)).toBeFalsy()
       expect(ipUtils.isValidIpv6(NaN)).toBeFalsy()
+      expect(ipUtils.isValidIpv6('1200::AB00:1234::2552:7777:1313')).toBeFalsy()
+      expect(ipUtils.isValidIpv6('1200:0000:AB00:1234:O000:2552:7777:1313')).toBeFalsy()    
     })
 
-    // it('Should return true for correct formats', () => {
-    //   expect(ipUtils.isValidIpv6('fe80:0000:0000:0000:0204:61ff:fe9d:f156')).toBeTruthy()
-    //   expect(ipUtils.isValidIpv6('fe80:0:0:0:204:61ff:fe9d:f156')).toBeTruthy()
-    //   expect(ipUtils.isValidIpv6('fe80::204:61ff:fe9d:f156')).toBeTruthy()
-    //   expect(ipUtils.isValidIpv6('fe80:0000:0000:0000:0204:61ff:254.157.241.86')).toBeTruthy()
-    //   expect(ipUtils.isValidIpv6('fe80:0:0:0:0204:61ff:254.157.241.86')).toBeTruthy()
-    //   expect(ipUtils.isValidIpv6('fe80::204:61ff:254.157.241.86')).toBeTruthy()
-    // })
+    it('Should return true for correct formats', () => {
+      expect(ipUtils.isValidIpv6('fe80:0000:0000:0000:0204:61ff:fe9d:f156')).toBeTruthy()
+      expect(ipUtils.isValidIpv6('fe80:0:0:0:204:61ff:fe9d:f156')).toBeTruthy()
+      expect(ipUtils.isValidIpv6('fe80::204:61ff:fe9d:f156')).toBeTruthy()
+      expect(ipUtils.isValidIpv6('fe80:0000:0000:0000:0204:61ff:254.157.241.86')).toBeTruthy()
+      expect(ipUtils.isValidIpv6('fe80:0:0:0:0204:61ff:254.157.241.86')).toBeTruthy()
+      expect(ipUtils.isValidIpv6('fe80::204:61ff:254.157.241.86')).toBeTruthy()
+      expect(ipUtils.isValidIpv6('1200:0000:AB00:1234:0000:2552:7777:1313')).toBeTruthy()
+      expect(ipUtils.isValidIpv6('21DA:D3:0:2F3B:2AA:FF:FE28:9C5A')).toBeTruthy()
+    })
   })
 
   describe('Is Valid IP', () => {
