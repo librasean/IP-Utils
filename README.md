@@ -16,17 +16,17 @@ $ yarn install --save ip-utils
 ```js
 Browser
 // Import the Library
-import * as ip from 'ip-util';
+import * as ip from 'ip-utils';
 // Use any of the contained methods
 ip.validIp('1.1.1.1');  // True
 
 // Alternatively - import functions selectively
-import { validIp } from 'ip-util'
+import { validIp } from 'ip-utils'
 validIp('1.1.1.1'); // True
 
 NodeJS
 // Import the Library
-const ip = require('ip-util');
+const ip = require('ip-utils');
 // Use any of the contained methods
 ip.validIp('1.1.1.1'); // True
 ```
